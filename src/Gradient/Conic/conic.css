@@ -1,0 +1,24 @@
+.container-conic {
+  font-family: fantasy;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.simple-conic {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(from 90deg, #f64f59 20%, #c471ed 50%, #12c2e9 90%);
+}
+
+.simple-conic2 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(at 0% 50%, #f64f59 0%, #c471ed 30%, #12c2e9 60%);
+}

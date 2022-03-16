@@ -1,0 +1,84 @@
+.container-radial {
+  font-family: fantasy;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.simple-radial {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  );
+
+  /* filter: blur(2px); */
+  /* -webkit-filter: blur(8px); */
+}
+
+.stack-radial {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+      circle at 50% 0,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(0, 0, 255, 0.5),
+      rgba(0, 0, 255, 0) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(0, 255, 0, 0.5),
+        rgba(0, 255, 0, 0) 70.71%
+      )
+      beige;
+  border-radius: 50%;
+}
+
+.animate-radial {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 255, 255, 0) 10%,
+      #030303 100%
+    ),
+    linear-gradient(to top left, #f64f59, #c471ed, #12c2e9);
+  background-size: 200% 200%;
+  animation: gradient-radial 5s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gradient-radial {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 20% 100%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  75% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

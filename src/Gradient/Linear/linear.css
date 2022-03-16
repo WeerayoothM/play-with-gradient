@@ -1,0 +1,94 @@
+.container-linear {
+  font-family: fantasy;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.simple-linear {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  background: linear-gradient(to bottom left, #f64f59, #c471ed, #12c2e9);
+
+  /* filter: blur(2px); */
+  /* -webkit-filter: blur(8px); */
+}
+
+.combine-linear {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to top right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 255, 255, 0) 50%,
+      #69efbce5 100%
+    ),
+    /* linear-gradient(to top right, #ec8179), */
+      linear-gradient(
+        to bottom left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(22, 255, 255, 0) 80%,
+        #c471ed 100%
+      ),
+    linear-gradient(to top left, #f64f59, #c471ed, #12c2e9);
+}
+
+.stack-linear {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+.animate-linear {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to top right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 255, 255, 0) 50%,
+      #a3ef69 100%
+    ),
+    /* linear-gradient(to top right, #ec8179), */
+      linear-gradient(
+        to bottom left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(22, 255, 255, 0) 80%,
+        #c471ed 100%
+      ),
+    linear-gradient(to top left, #f64f59, #c471ed, #12c2e9);
+  background-size: 400% 400%;
+  animation: gradient 5s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
